@@ -1,8 +1,23 @@
+//Ejercicio 1
 #include <iostream>
 using namespace std;
 
+#include <iostream>
+using namespace std;
+int main() {
+int stock = 250;
+int* p = &stock;
+cout << stock << endl; // 250
+cout << p << endl; // Wl lugar de stock(direccion hexadecimal)
+cout << *p << endl; // (250
+*p = 180; // se vendieron 70 unidades
+cout << stock << endl; // 180
+return 0;
+}
+
+//EJERCICIO 2
 void aplicarIVA(double* precio, double iva) {
-	*precio=*precio+(*precio*iva);
+	*precio=*precio*iva
 }
 int main() {
 double precio = 100.00;
@@ -11,24 +26,11 @@ cout << "Precio con IVA: " << precio << endl; // 112.00
 return 0;
 }
 
-using namespace std;
-
-void incrementar(int& val, int n){
-val += n;
-}
-// Como se llama:
-int contador = 10;
-incrementar(contador, 5);
-
-//puntero
- incrementar(int* val, int n){
-*val += n;
-}
-// Como se llama:
-int contador = 10;
-incrementar(&contador, 5);
-//pregunta 1 ambas se llam incrementar la unica diferencia es 
-//que uno es con referencia la otra con puntero
-
-//pregunta 2 el operador que aparece es el *
-//pregunta 3 Si en ambos casos vale 15
+//EJERCICIO 3
+//1)
+//void incrementar(int& val, int n) este utiliza puntero mientras que el otro
+//void incrementar(int* val, int n) utiliza referencia
+//2)
+//Aparece el puntero de *val 
+//3)
+//En ambos casos vale 15
